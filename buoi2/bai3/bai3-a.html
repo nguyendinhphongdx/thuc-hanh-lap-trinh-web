@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        header,
+        nav,
+        footer,
+        figure {
+            text-align: center;
+        }
+        
+        header {
+            background-color: aqua;
+            padding: 10px 0px;
+        }
+        
+        nav {
+            padding: 5px 0px;
+            background-color: burlywood;
+        }
+        
+        nav a {
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            color: red;
+        }
+        
+        figure {
+            float: left;
+            margin: 20px;
+            overflow: hidden;
+        }
+        
+        .main-content {
+            float: left;
+            padding: 20px;
+        }
+        
+        footer {
+            clear: both;
+            background-color: rgb(127, 127, 241);
+            padding: 5px 0px;
+        }
+        
+        figure:hover img {
+            transform: scale(1.1);
+            transition: all 0.25s;
+        }
+        
+        h3:hover {
+            color: rgb(179, 13, 13);
+            cursor: pointer;
+        }
+        
+        footer:hover {
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TOP 5 CƠ HỘI NGHỀ NGHIỆP DÀNH CHO SINH VIÊN CNTT</h1>
+    </header>
+    <nav>
+        <a href="">Giam Đốc CNTT</a> |
+        <a href="">Trưởng Phòng CNTT</a> |
+        <a href="">Giam Đốc Kỹ Thuật</a> |
+        <a href="">Trưởng nhóm lập trình</a> |
+        <a href="">Chuyên gia phân tích dữ liệu</a> |
+    </nav>
+    <figure>
+        <img src="../assets/images/keysuccess.png" alt="" width="200px">
+        <figcaption>Hình 1. Chìa khóa thành công.</figcaption>
+    </figure>
+    <div class="main-content">
+        <article>
+            <h3>Giám Đốc CNTT</h3>
+            <details>
+                <summary>Với kinh nghiệm 10 - 20 năm, học viên ngành IT có thể trở thành CIO - Giasm đốc CNTT, sở hữu mức lương 3000 - 5000 USD.</summary>
+            </details>
+        </article>
+        <article>
+            <h3>Trưởng Phòng CNTT</h3>
+            <details>
+                <summary>Ở mức kinh nghiệm thấp hơn 5-10 năm, sinh viên IT có thể trở thành IT manager - Trưởng phòng CNTT và sở hữu mức lương 1000 - 2000 USD.</summary>
+            </details>
+        </article>
+        <article>
+            <h3>Giám đốc kỹ thuật</h3>
+            <details>
+                <summary>Học viên ngành IT có thể trở thành teachnical leader - Giám đốc kỹ thuật khi có từ 5 - 10 năm kinh nghiệm.</summary>
+            </details>
+        </article>
+        <article>
+            <h3>Trưởng nhóm lập trình</h3>
+            <details>
+                <summary>Team leader - Trưởng nhóm lập trình là công việc thường thấy của dân IT khi có 3-5 năm kinh nghiệm.</summary>
+            </details>
+        </article>
+    </div>
+    <footer>Design by (Nguyễn Đình Phong)</footer>
+</body>
+
+</html>

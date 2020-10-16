@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            background-color: #9933cc;
+            color: aliceblue;
+            padding: 15px;
+        }
+        
+        .menu {
+            margin: 10px;
+        }
+        
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        
+        .menu li:hover {
+            background-color: #0099cc;
+        }
+        
+        .frame {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .frame img {
+            width: 100%;
+            border: 15px solid #ccc;
+        }
+        
+        .column {
+            float: left;
+            padding: 10px;
+        }
+        
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .footer {
+            background-color: #9933cc;
+            color: aliceblue;
+            padding: 15px;
+            text-align: center;
+        }
+        /* For mobile phones: */
+        
+        [class*="col-"] {
+            width: 100%;
+        }
+        
+        @media only screen and (min-width: 768px) {
+            /* For desktop: */
+            /* .column:first-child {
+                width: 25%;
+            }
+            .column:nth-child(2) {
+                width: 50%;
+            }
+            .column:last-child {
+                width: 25%;
+            } */
+            .col-1 {
+                width: 8.33%;
+            }
+            .col-2 {
+                width: 16.66%;
+            }
+            .col-3 {
+                width: 25%;
+            }
+            .col-4 {
+                width: 33.33%;
+            }
+            .col-5 {
+                width: 41.66%;
+            }
+            .col-6 {
+                width: 50%;
+            }
+            .col-7 {
+                width: 58.33%;
+            }
+            .col-8 {
+                width: 66.66%;
+            }
+            .col-9 {
+                width: 75%;
+            }
+            .col-10 {
+                width: 83.33%;
+            }
+            .col-11 {
+                width: 91.66%;
+            }
+            .col-12 {
+                width: 100%;
+            }
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>CHỢ VIỆC LÀM</h1>
+    </div>
+    <div class="container">
+        <div class="column col-4">
+            <ul class="menu">
+                <li>CNTT</li>
+                <li>Giáo Dục</li>
+                <li>Kiến Trúc</li>
+                <li>Kinh Tế</li>
+            </ul>
+        </div>
+        <div class="column col-4">
+            <div class="title">
+                <h3>Cơ hội việc làm cho sinh viên CNTT</h3>
+            </div>
+            <div class="job">
+                <div class="name">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                </div>
+                <div class="introduction">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iste sunt officiis beatae voluptate cum aspernatur voluptatibus. Ratione, eveniet eum.
+                </div>
+            </div>
+            <div class="job">
+                <div class="name">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                </div>
+                <div class="introduction">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iste sunt officiis beatae voluptate cum aspernatur voluptatibus. Ratione, eveniet eum.
+                </div>
+            </div>
+            <div class="job">
+                <div class="name">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                </div>
+                <div class="introduction">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iste sunt officiis beatae voluptate cum aspernatur voluptatibus. Ratione, eveniet eum.
+                </div>
+            </div>
+            <div class="job">
+                <div class="name">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                </div>
+                <div class="introduction">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iste sunt officiis beatae voluptate cum aspernatur voluptatibus. Ratione, eveniet eum.
+                </div>
+            </div>
+        </div>
+        <div class="column col-4">
+            <div class="frame">
+                <img src="../assets/images/succes.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h3>Design by (Nguyễn Đình Phong)</h3>
+    </div>
+</body>
+
+</html>

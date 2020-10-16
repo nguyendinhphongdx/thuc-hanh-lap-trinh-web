@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            background-color: cornflowerblue;
+            padding: 25px;
+            color: aliceblue;
+        }
+        
+        .menu {
+            background-color: burlywood;
+        }
+        
+        .main-menu {}
+        
+        .main-menu li {
+            padding: 10px 20px;
+            position: relative;
+            float: left;
+        }
+        
+        .main-menu li:hover {
+            background-color: rgb(30, 88, 88);
+            color: aliceblue;
+        }
+        
+        .main-menu li:hover .sub-menu {
+            display: block;
+        }
+        
+        .sub-menu {
+            background-color: burlywood;
+            position: absolute;
+            width: 100%;
+            top: 38px;
+            left: 0;
+            display: none;
+        }
+        
+        .wrapper {
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .content-left {
+            width: 25%;
+            float: left;
+        }
+        
+        .group-search {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .goup-search input {
+            width: 100%;
+        }
+        
+        .content-right {
+            float: left;
+            width: 75%;
+        }
+        
+        .list-sanpham {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .list-sanpham li {
+            width: 20%;
+            margin: 0px 5px;
+        }
+        
+        .sanpham {
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        
+        .sanpham img {
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        .wrapper::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        /* For mobile phones: */
+        
+        [class*="col-"] {
+            width: 100%;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            /* For desktop: */
+            .col-1 {
+                width: 8.33%;
+            }
+            .col-2 {
+                width: 16.66%;
+            }
+            .col-3 {
+                width: 25%;
+            }
+            .col-4 {
+                width: 33.33%;
+            }
+            .col-5 {
+                width: 41.66%;
+            }
+            .col-6 {
+                width: 50%;
+            }
+            .col-7 {
+                width: 58.33%;
+            }
+            .col-8 {
+                width: 66.66%;
+            }
+            .col-9 {
+                width: 75%;
+            }
+            .col-10 {
+                width: 83.33%;
+            }
+            .col-11 {
+                width: 91.66%;
+            }
+            .col-12 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header col-12">
+        <h1>BOOKS ONLINE</h1>
+    </div>
+    <div class="menu">
+        <ul class="main-menu">
+            <li class="col-12">SÁCH GIÁO KHOA
+                <ul class="sub-menu">
+                    <li>Lớp 6</li>
+                    <li>Lớp 7</li>
+                    <li>Lớp 8</li>
+                </ul>
+            </li>
+            <li class="col-12">SÁCH THAM KHẢO</li>
+            <li class="col-12">TẠP CHÍ CHUYÊN NGÀNH</li>
+            <li class="col-12">TRUYỆN THIẾU NHI</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="content-left">
+            <div class="group-search">
+                <label for="">Tìm Kiếm:</label>
+                <input type="text">
+                <button>Tìm</button>
+            </div>
+        </div>
+        <div class="content-right">
+            <div class="container">
+                <ul class="list-sanpham">
+                    <li>
+                        <div class="sanpham">
+                            <div class="title">
+                                Ngữ văn
+                            </div>
+                            <img src="../assets/images/Ngu-van-12.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sanpham">
+                            <div class="title">
+                                Ngữ văn
+                            </div>
+                            <img src="../assets/images/Ngu-van-12.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sanpham">
+                            <div class="title">
+                                Ngữ văn
+                            </div>
+                            <img src="../assets/images/Ngu-van-12.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sanpham">
+                            <div class="title">
+                                Ngữ văn
+                            </div>
+                            <img src="../assets/images/Ngu-van-12.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sanpham">
+                            <div class="title">
+                                Ngữ văn
+                            </div>
+                            <img src="../assets/images/Ngu-van-12.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sanpham">
+                            <div class="title">
+                                Ngữ văn
+                            </div>
+                            <img src="../assets/images/Ngu-van-12.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sanpham">
+                            <div class="title">
+                                Ngữ văn
+                            </div>
+                            <img src="../assets/images/Ngu-van-12.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sanpham">
+                            <div class="title">
+                                Ngữ văn
+                            </div>
+                            <img src="../assets/images/Ngu-van-12.jpg" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+</body>
+
+</html>
