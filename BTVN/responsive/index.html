@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            text-align: center;
+            background-color: aqua;
+            padding: 10px 0px;
+        }
+        
+        .column {
+            width: 33%;
+            float: left;
+            border: 1px solid black;
+        }
+        
+        .box {
+            margin: 5px;
+            background-color: orange;
+            padding: 5px;
+        }
+        
+        @media screen and (max-with:780px) {
+            .column {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Responsive web design</h1>
+    </div>
+    <div class="container">
+        <div class="column">
+            <div class="box">
+                JavaScript
+            </div>
+            <div class="box">
+                PHP
+            </div>
+            <div class="box">
+                Python
+            </div>
+        </div>
+        <div class="column">
+            <div class="title">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aliquam quam doloribus numquam consectetur dolorum dolores, dicta assumenda aut ipsa?</p>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/javascript-la-gi.jpg" alt="" width="100%">
+        </div>
+    </div>
+</body>
+
+</html>

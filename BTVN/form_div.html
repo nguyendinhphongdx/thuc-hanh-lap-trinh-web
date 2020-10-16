@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        
+        .container .row:first-child {
+            border: 1px solid black;
+        }
+        
+        .container .row:last-child {
+            justify-content: center;
+        }
+        
+        .container .row:last-child button {
+            margin: 5px;
+            padding: 5px;
+        }
+        
+        .row {
+            margin: 2px;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+        
+        .row h2 {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .row .title {
+            width: 30%;
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            padding-left: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        
+        .row .value {
+            width: 70%;
+            border: 1px solid black;
+            padding-left: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-left: 2px;
+        }
+        
+        .input-text {
+            width: 70%;
+            height: 20px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>Đăng Ký</h2>
+        </div>
+        <div class="row">
+            <div class="title">FullName</div>
+            <div class="value">
+                <input class="input-text" type="text" placeholder="enter Fullname">
+            </div>
+        </div>
+        <div class="row">
+            <div class="title">UserName</div>
+            <div class="value">
+                <input class="input-text" type="text" placeholder="enter UserName">
+            </div>
+        </div>
+        <div class="row">
+            <div class="title">Password</div>
+            <div class="value">
+                <input class="input-text" type="text" placeholder="enter Password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="title">Password again</div>
+            <div class="value">
+                <input class="input-text" type="text" placeholder="enter Password again">
+            </div>
+        </div>
+        <div class="row">
+            <div class="title">Gender</div>
+            <div class="value">
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">FeMale</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="title">BirthDay</div>
+            <div class="value">
+                <select name="day" id="">
+                    <option value="">Day 1</option>
+                    <option value="">Day 2</option>
+                    <option value="">Day 3</option>
+                </select>
+                <select name="month" id="">
+                    <option value="">Month 1</option>
+                    <option value="">Month 2</option>
+                    <option value="">Month 3</option>
+                </select>
+                <select name="year" id="">
+                    <option value="">Year 2019</option>
+                    <option value="">Year 2020</option>
+                    <option value="">Year 2021</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="title">Address</div>
+            <div class="value">
+                <textarea name="" id="" cols="30" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="title">Avatar</div>
+            <div class="value">
+                <input type="file">
+            </div>
+        </div>
+        <div class="row">
+            <div class="title">Favourite</div>
+            <div class="value">
+                <input type="checkbox" id="film">
+                <label for="film">Watch Film</label>
+                <input type="checkbox" id="Sport">
+                <label for="Sport">Sport</label>
+                <input type="checkbox" id="web">
+                <label for="web">Web</label>
+            </div>
+        </div>
+        <div class="row">
+            <button>Reset</button>
+            <button>OK</button>
+        </div>
+    </div>
+</body>
+
+</html>
