@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        form {
+            border: 1px solid #ccc;
+            padding: 40px;
+        }
+        
+        label {
+            width: 120px;
+            display: inline-block;
+        }
+        
+        select {
+            width: 120px;
+        }
+        
+        .click {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+    <script>
+        function splitString() {
+            var stringOrigin = document.getElementById('stringOrigin');
+            var list = [];
+            if (stringOrigin.value.length == 0) {
+                alert('vui long nhap noi dung');
+                stringOrigin.focus();
+            } else {
+                list = stringOrigin.value.split(',');
+                document.getElementById('list').innerHTML = "";
+                for (var i = 0; i < list.length; i++) {
+                    document.getElementById('list').innerHTML += '<option value="' + list[i] + '" >' + list[i] + '</option>';
+                }
+            }
+        }
+
+        function chose() {
+            var index;
+            var listOptions = document.getElementsByTagName('option');
+            for (var i = 0; i < listOptions.length; i++) {
+                if (listOptions[i].selected == true) {
+                    index = i;
+                }
+            }
+            alert('ban chon : ' + listOptions[index].innerText);
+        }
+
+        function cancel() {
+            document.getElementById('list').innerHTML = "";
+            document.getElementById('stringOrigin').value = "";
+        }
+    </script>
+</head>
+
+<body onload="">
+    <div class="container">
+        <form action="">
+            <label for="">Chuỗi</label><input type="text" id="stringOrigin">
+            <br>
+            <br>
+            <label for="">Danh Sách</label>
+            <select name="fruit" id="list" onchange="chose()">
+                <option value=""></option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <div class="click">
+                <input type="button" value="Thực Hiện" onclick="splitString()">
+                <input type="button" value="Hủy" onclick="cancel()">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

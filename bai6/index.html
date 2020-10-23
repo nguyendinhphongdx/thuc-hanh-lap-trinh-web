@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        label {
+            width: 100px;
+            display: inline-block;
+        }
+        
+        form {
+            padding: 40px;
+            border: 1px solid #ccc;
+        }
+        
+        .click {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        input#zodiac {
+            width: 137px;
+        }
+        
+        input#show {
+            margin-right: 40px;
+        }
+    </style>
+    <script>
+        function setup() {
+            var regex = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+            document.getElementById('birthday').value = regex;
+        }
+
+        function showZodiac() {
+            var stringBirth = document.getElementById('birthday').value;
+            var date = stringBirth.split('/');
+            console.log(date);
+            
+        }
+    </script>
+</head>
+
+<body onload="setup()">
+    <div class="container">
+        <form action="">
+
+            <label for="">Ngày Sinh:</label> <input type="text" name="" id="birthday">
+            <br>
+            <br>
+            <label for="">Cung:</label> <input type="text" name="" id="zodiac">
+            <br>
+            <br>
+            <div class="click">
+                <input type="button" value="Xem" id="show" onclick="showZodiac()" pattern="[A-Za-z]{3}">
+                <input type="button" value="Xóa" id="delete">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
