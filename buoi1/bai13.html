@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const onAlert = ()=>{
+            const paragraph = prompt();
+            const words = paragraph.split(" ");
+            var min = words[0].length;max = words[0].length;
+            words.forEach(item =>{
+                if(item.length > max){
+                    max = item.length;
+                }
+                if(item.length < min){
+                    min = item.length;
+                }
+            })
+            const wordsMin = words.filter(item => item.length == min);
+            const wordsMax = words.filter(item => item.length == max);
+            alert(wordsMin.join('-'));
+            alert(wordsMax.join('-'));
+        }
+        const onFilter =()=>{
+            var confirms = true;
+            while (confirms) {
+                onAlert();
+                confirms = confirm('Có muốn tiếp tục hay không');
+            }
+        }
+    </script>
+</head>a
+<body onload="onFilter()">
+    <h1>Bài 13</h1>
+</body>
+</html>

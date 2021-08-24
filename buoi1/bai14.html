@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        body{
+            background-color:rgba(0, 0, 0, 0.05) ;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            border: 1px solid gray;
+            width: 350px;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .row{
+            display: flex;
+            margin: 10px 0px;
+        }
+        .lable{
+            width: 80px;
+        }
+        .alert{
+            text-align: center;
+        }
+        .input{
+            margin-right: 20px;
+        }
+        .footer{
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+        button{
+            padding: 5px 10px;
+            margin: 0px 5px;
+        }
+    </style>
+     <script>
+        const Execute = ()=>{
+            const height = document.getElementById('height').value;
+            const weight = document.getElementById('weight').value;
+            const bmi = (weight/(height**2))
+            document.getElementById('bmi').innerHTML = bmi;
+            document.getElementById('result').innerHTML = goOutResult(bmi);
+        }
+        const goOutResult = (bmiString)=>{
+            const bmi = parseInt(bmiString);
+            console.log(bmi,typeof bmi);
+            switch (bmi) {
+                case bmi<18.5:return 'Dưới chuẩn'
+                case bmi>=18.5 && bmi <25:return 'chuẩn'
+                case bmi>=25 && bmi <30:return 'Thừa cân'
+                case bmi>=30 && bmi <40:return 'Béo, cần giảm cân'
+                case bmi >= 40:return 'Rất béo, cần giảm cân ngay'
+                default: return 'no return'
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="lable">Chiều cao</div>
+            <div class="input"><input type="text" id="height"></div>
+            m
+        </div>
+        <div class="row">
+            <div class="lable">Cân nặng</div>
+            <div class="input"><input type="text" id="weight"></div>
+            kg
+        </div>
+        <p class="alert">BMI của bạn là <span id="bmi">17.8</span>, bạn ở mức <span id="result">dưới chuẩn</span> </p>
+        <div class="footer">
+            <button onclick="Execute()">Thực hiện</button>
+            <button onclick="Cancel()">Hủy</button>
+        </div>
+    </div>
+</body>
+</html>
