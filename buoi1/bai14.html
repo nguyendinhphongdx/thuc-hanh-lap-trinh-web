@@ -50,21 +50,22 @@
         const Execute = ()=>{
             const height = document.getElementById('height').value;
             const weight = document.getElementById('weight').value;
-            const bmi = (weight/(height**2))
+            const bmi = (weight/(height**2)).toFixed(1);
             document.getElementById('bmi').innerHTML = bmi;
             document.getElementById('result').innerHTML = goOutResult(bmi);
         }
         const goOutResult = (bmiString)=>{
-            const bmi = parseInt(bmiString);
-            console.log(bmi,typeof bmi);
-            switch (bmi) {
-                case bmi<18.5:return 'Dưới chuẩn'
-                case bmi>=18.5 && bmi <25:return 'chuẩn'
-                case bmi>=25 && bmi <30:return 'Thừa cân'
-                case bmi>=30 && bmi <40:return 'Béo, cần giảm cân'
-                case bmi >= 40:return 'Rất béo, cần giảm cân ngay'
-                default: return 'no return'
+            const bmi = parseFloat(bmiString);
+            let result = 'no return';
+            switch (true) {
+                case (bmi<18.5):result= 'Dưới chuẩn';break;
+                case (bmi>=18.5 && bmi <25):result= 'chuẩn';break;
+                case (bmi>=25 && bmi <30):result= 'Thừa cân';break;
+                case (bmi>=30 && bmi <40):result= 'Béo, cần giảm cân';break;
+                case ( bmi >= 40):result= 'Rất béo, cần giảm cân ngay';break;
+                default: break;
             }
+            return result
         }
     </script>
 </head>
