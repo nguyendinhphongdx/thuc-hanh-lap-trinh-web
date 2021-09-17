@@ -20,10 +20,11 @@ namespace Bai17
                 Button button = new Button();
                 button.Text = "Buy Now";
                 button.CssClass = "button";
-                string content = "<div class='pannel'><h3 style='line-height:50px;margin:0px'>" + item.Name + "</h3>" + "<image class='image' src='./assets/login_background_dark.png'/><h2>"+item.Price+ "</h2></div>";
+                string content = "<div><h3 style='line-height:50px;margin:0px'>" + item.Name + "</h3>" + "<image class='image' src='"+item.Images+"'/><h2>"+item.Price+ "</h2></div>";
                 panel.Controls.Add(new LiteralControl(content));
-                
+              
                 panel.Controls.Add(button);
+                panel.CssClass = "pannel";
                 PanelList.Controls.Add(panel);
             }
              
@@ -32,11 +33,17 @@ namespace Bai17
         private List<Product> MockProducts()
         {
             List<Product> list = new List<Product>();
-            for (int i=1;i<6;i++)
-            {
-                Product product = new Product(i,"Product "+i,"in stock",i*100,"bottle");
-                list.Add(product);
-            }
+            //for (int i=1;i<6;i++)
+            //{
+            //    Product product = new Product(i,"Product "+i,"in stock",i*100,"bottle","./assets/login_background_dark.png");
+            //    list.Add(product);
+            //}
+            list.Add(new Product(1, "Product 1", "in stock", 225, "bottle", "./assets/product1.png"));
+            list.Add(new Product(2, "Product 2", "in stock", 225, "bottle", "./assets/product2.png"));
+            list.Add(new Product(3, "Product 3", "in stock", 225, "bottle", "./assets/product3.png"));
+            list.Add(new Product(4, "Product 4", "in stock", 225, "bottle", "./assets/product4.png"));
+            list.Add(new Product(5, "Product 5", "in stock", 225, "bottle", "./assets/product5.png"));
+            list.Add(new Product(6, "Product 6", "in stock", 225, "bottle", "./assets/product6.png"));
             return list;
         }
     }

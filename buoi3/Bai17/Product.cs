@@ -12,14 +12,16 @@ namespace Bai17
         string status;
         double price;
         string unit;
+        string images;
 
-        public Product(int id, string name, string status, double price, string unit)
+        public Product(int id, string name, string status, double price, string unit, string images)
         {
-            this.Id = id;
-            this.Name = name;
-            this.Status = status;
-            this.Price = price;
-            this.Unit = unit;
+            this.id = id;
+            this.name = name;
+            this.status = status;
+            this.price = price;
+            this.unit = unit;
+            this.Images = images;
         }
 
         public int Id { get => id; set => id = value; }
@@ -27,5 +29,6 @@ namespace Bai17
         public string Status { get => status; set => status = value; }
         public double Price { get => price; set => price = value; }
         public string Unit { get => unit; set => unit = value; }
+        public string Images { get => images; set => images = value; }
     }
 }
