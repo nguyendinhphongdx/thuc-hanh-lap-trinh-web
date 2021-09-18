@@ -14,6 +14,10 @@ namespace Bai17
         string unit;
         string images;
 
+        public Product()
+        {
+        }
+
         public Product(int id, string name, string status, double price, string unit, string images)
         {
             this.id = id;
