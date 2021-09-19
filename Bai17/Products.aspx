@@ -65,15 +65,31 @@
         h2 {
             line-height: 0;
         }
+        .footer{
+            display:flex;
+            justify-content:center;
+        }
     </style>
 </head>
     
 <body>
-    <form id="form1" runat="server">
         <div >
             <asp:Panel ID= "PanelList"  runat = "server">
+                   <% foreach (Bai17.Product sp in products) {
+                           %>
+                    <form  method="post" action="AddToCart.aspx">
+                         <div  class="pannel" >
+                            <div><h3 style='line-height:50px;margin:0px'> <%=sp.Name %> </h3> <img class='image' src="<%=sp.Images %>"/><h2>230</h2></div>
+                             <div class="footer">
+                                    <input type="number" style="width:50px"  name="soluong" value="1"/>
+                                    <input hidden="hidden" value="<%=sp.Id %>" name="masp"/>
+                                    <button  class="button" type="submit">Buy Now</button>
+                            </div>
+                    </div>
+                     </form>
+                        <% } %>
             </asp:Panel>
         </div>
-    </form>
+   
 </body>
 </html>

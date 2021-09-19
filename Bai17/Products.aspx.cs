@@ -9,25 +9,12 @@ namespace Bai17
 {
     public partial class Products : System.Web.UI.Page
     {
-        List<Product> products;
+        public List<Product> products;
         protected void Page_Load(object sender, EventArgs e)
         {
-             products = MockProducts();
+            //products = MockProducts();
+            products = (List<Product>)Application["Products"];
             PanelList.CssClass = "listPannel";
-            foreach (Product item in products)
-            {
-                Panel panel = new Panel();
-                Button button = new Button();
-                button.Text = "Buy Now";
-                button.CssClass = "button";
-                string content = "<div><h3 style='line-height:50px;margin:0px'>" + item.Name + "</h3>" + "<image class='image' src='"+item.Images+"'/><h2>"+item.Price+ "</h2></div>";
-                panel.Controls.Add(new LiteralControl(content));
-              
-                panel.Controls.Add(button);
-                panel.CssClass = "pannel";
-                PanelList.Controls.Add(panel);
-            }
-             
         }
 
         private List<Product> MockProducts()
@@ -46,5 +33,6 @@ namespace Bai17
             list.Add(new Product(6, "Product 6", "in stock", 225, "bottle", "./assets/product6.png"));
             return list;
         }
+
     }
 }
