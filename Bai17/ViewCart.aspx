@@ -25,14 +25,14 @@
             width: 100%;
         }
        table td,table th {
-            border: 1px solid #ddd;
+            border: 1px solid #329094;
             padding: 8px 18px;
             text-align: center;
        }
-       table th {
-            border: 1px solid rgb(113, 112, 197);
-            text-align: center;
-       }
+         table th {
+             border: 1px solid rgb(113, 112, 197);
+             text-align: center;
+         }
        table tr:nth-child(even){background-color: #e6d7d7;}
        table tr:hover {background-color: rgb(163, 174, 241);}
        table th {
@@ -79,7 +79,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+
          <div class="wrapper">
         <table>
             <thead>
@@ -100,13 +100,19 @@
                     Thành tiền
                  </th>
                  <th>
-                    Cập nhật
+                     <form id="form-update" method="post" action="ViewCart.aspx">
+                          <input name="action" hidden="hidden" value="update" form="form-update"/>
+                         <button type="submit" class="button buy-con">Cập nhật</button>
+                     </form>
+                    
                  </th>
               </tr>
             </thead>
                
          <tbody>
-           <%foreach (Bai17.Cart cart in carts) { %>
+           <%foreach (Bai17.Cart cart in carts) {
+                   int id = cart.Product.Id;
+                   %>
                 <tr>
                 <td>
                     <img src="<%=cart.Product.Images %>" width="70" height="40"/>
@@ -118,13 +124,19 @@
                    <%=cart.Product.Price %> VND
                 </td>
                 <td>
-                     <%=cart.Soluong %>
+                     <input name="Id" hidden="hidden" value="<%=cart.Product.Id%>" form="form-update"/>
+                    
+                     <input name="soluong" type="number" class="input-soluong" value="<%=cart.Soluong %>" form="form-update"/>
                  </td>
                  <td>
                      <%=cart.Soluong * cart.Product.Price %>
                  </td>
                  <td>
-                    <button runat="server"  class="button">Xóa</button>
+                     <form  method="post" action="ViewCart.aspx">
+                            <input name="Id" hidden="hidden" value=" <%=cart.Product.Id%>" />
+                            <input name="action" hidden="hidden" value="delete"/>
+                            <button type="submit" class="button">Xóa</button>
+                     </form>
                  </td>
             </tr>
              <%} %>
@@ -142,6 +154,5 @@
             </div>
         </div>
     </div>
-    </form>
 </body>
 </html>
